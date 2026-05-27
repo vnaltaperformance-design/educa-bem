@@ -1,0 +1,268 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const WA_LINK = "https://wa.me/5511993484371?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20%C3%A0%20Escola%20Educa%20Bem.%20Podem%20me%20ajudar%3F";
+---
+
+<Layout
+  title="Contato e Visita — Escola Educa Bem | Berçário Pompeia SP"
+  description="Entre em contato com a Escola Educa Bem. Agende uma visita, tire dúvidas pelo WhatsApp ou ligue. R. Dr. Miranda de Azevedo, 920 — Pompeia, São Paulo."
+  canonical="/contato"
+>
+  <Header />
+  <main id="main-content">
+
+    <section style="background:var(--color-primary-light);padding:5rem 1.5rem;" aria-labelledby="contato-heading">
+      <div style="max-width:900px;margin:0 auto;text-align:center;">
+        <span style="font-size:2.5rem;" aria-hidden="true">📍</span>
+        <h1 id="contato-heading" style="font-size:clamp(2rem,4vw,2.75rem);font-weight:900;color:var(--color-dark);margin:0.75rem 0 1.25rem;">
+          Venha conhecer a Educa Bem
+        </h1>
+        <p style="color:var(--color-dark-muted);font-size:1.1rem;max-width:600px;margin:0 auto 2rem;line-height:1.8;">
+          Agende uma visita gratuita e veja com seus próprios olhos por que as famílias da Pompeia confiam na Educa Bem.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;" class="two-col-grid">
+
+        <!-- Formulário de agendamento -->
+        <div class="animate-on-scroll">
+          <h2 style="font-size:1.5rem;font-weight:800;color:var(--color-dark);margin:0 0 1.5rem;">
+            Agendar visita à escola
+          </h2>
+
+          <form
+            id="contact-form"
+            style="display:flex;flex-direction:column;gap:1.25rem;"
+            novalidate
+          >
+            <div>
+              <label for="nome" style="display:block;font-weight:700;color:var(--color-dark);margin-bottom:0.5rem;font-size:0.95rem;">
+                Seu nome completo *
+              </label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                required
+                placeholder="Ex: Maria Silva"
+                style="width:100%;padding:14px 16px;border:2px solid #E5E7EB;border-radius:12px;font-size:1rem;font-family:'Nunito',sans-serif;outline:none;transition:border-color 0.2s;"
+                onfocus="this.style.borderColor='var(--color-primary)'"
+                onblur="this.style.borderColor='#E5E7EB'"
+              />
+            </div>
+
+            <div>
+              <label for="telefone" style="display:block;font-weight:700;color:var(--color-dark);margin-bottom:0.5rem;font-size:0.95rem;">
+                WhatsApp / Telefone *
+              </label>
+              <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                required
+                placeholder="(11) 99999-9999"
+                style="width:100%;padding:14px 16px;border:2px solid #E5E7EB;border-radius:12px;font-size:1rem;font-family:'Nunito',sans-serif;outline:none;transition:border-color 0.2s;"
+                onfocus="this.style.borderColor='var(--color-primary)'"
+                onblur="this.style.borderColor='#E5E7EB'"
+              />
+            </div>
+
+            <div>
+              <label for="idade" style="display:block;font-weight:700;color:var(--color-dark);margin-bottom:0.5rem;font-size:0.95rem;">
+                Idade da criança *
+              </label>
+              <select
+                id="idade"
+                name="idade"
+                required
+                style="width:100%;padding:14px 16px;border:2px solid #E5E7EB;border-radius:12px;font-size:1rem;font-family:'Nunito',sans-serif;outline:none;background:white;transition:border-color 0.2s;"
+                onfocus="this.style.borderColor='var(--color-primary)'"
+                onblur="this.style.borderColor='#E5E7EB'"
+              >
+                <option value="">Selecione a faixa etária</option>
+                <option value="4-12meses">4 meses a 1 ano (Berçário)</option>
+                <option value="1-3anos">1 a 3 anos (Maternal)</option>
+                <option value="3-5anos">3 a 5 anos (Jardim)</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="horario" style="display:block;font-weight:700;color:var(--color-dark);margin-bottom:0.5rem;font-size:0.95rem;">
+                Melhor horário para visita
+              </label>
+              <select
+                id="horario"
+                name="horario"
+                style="width:100%;padding:14px 16px;border:2px solid #E5E7EB;border-radius:12px;font-size:1rem;font-family:'Nunito',sans-serif;outline:none;background:white;transition:border-color 0.2s;"
+                onfocus="this.style.borderColor='var(--color-primary)'"
+                onblur="this.style.borderColor='#E5E7EB'"
+              >
+                <option value="">Qualquer horário</option>
+                <option value="manha">Manhã (07h – 12h)</option>
+                <option value="tarde">Tarde (13h – 18h)</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="mensagem" style="display:block;font-weight:700;color:var(--color-dark);margin-bottom:0.5rem;font-size:0.95rem;">
+                Mensagem (opcional)
+              </label>
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                rows="3"
+                placeholder="Alguma dúvida ou informação adicional?"
+                style="width:100%;padding:14px 16px;border:2px solid #E5E7EB;border-radius:12px;font-size:1rem;font-family:'Nunito',sans-serif;outline:none;resize:vertical;transition:border-color 0.2s;"
+                onfocus="this.style.borderColor='var(--color-primary)'"
+                onblur="this.style.borderColor='#E5E7EB'"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary" style="justify-content:center;font-size:1.05rem;">
+              📅 Enviar pelo WhatsApp
+            </button>
+
+            <p style="font-size:0.8rem;color:var(--color-dark-muted);text-align:center;margin:0;">
+              Ao enviar, você será redirecionado para o WhatsApp com sua mensagem pronta.
+            </p>
+          </form>
+        </div>
+
+        <!-- Info de contato -->
+        <div class="animate-on-scroll">
+          <h2 style="font-size:1.5rem;font-weight:800;color:var(--color-dark);margin:0 0 2rem;">
+            Fale conosco
+          </h2>
+
+          <div style="display:flex;flex-direction:column;gap:1.5rem;margin-bottom:2.5rem;">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer"
+              style="display:flex;gap:1rem;align-items:center;background:#25D366;color:white;border-radius:16px;padding:1.25rem 1.5rem;text-decoration:none;transition:opacity 0.2s;"
+              onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <div>
+                <div style="font-weight:800;font-size:1.05rem;">WhatsApp</div>
+                <div style="font-size:0.9rem;opacity:0.9;">(11) 99348-4371 — Resposta rápida!</div>
+              </div>
+            </a>
+
+            <a href="tel:+5511993484371" style="display:flex;gap:1rem;align-items:center;background:var(--color-dark);color:white;border-radius:16px;padding:1.25rem 1.5rem;text-decoration:none;">
+              <span style="font-size:1.75rem;" aria-hidden="true">📱</span>
+              <div>
+                <div style="font-weight:800;font-size:1.05rem;">(11) 99348-4371</div>
+                <div style="font-size:0.9rem;opacity:0.7;">Celular / WhatsApp</div>
+              </div>
+            </a>
+
+            <a href="tel:+551136726082" style="display:flex;gap:1rem;align-items:center;background:var(--color-dark);color:white;border-radius:16px;padding:1.25rem 1.5rem;text-decoration:none;">
+              <span style="font-size:1.75rem;" aria-hidden="true">☎️</span>
+              <div>
+                <div style="font-weight:800;font-size:1.05rem;">(11) 3672-6082</div>
+                <div style="font-size:0.9rem;opacity:0.7;">Telefone fixo</div>
+              </div>
+            </a>
+
+            <a href="https://www.instagram.com/educa_bem" target="_blank" rel="noopener noreferrer"
+              style="display:flex;gap:1rem;align-items:center;background:linear-gradient(135deg,#E1306C,#F77737);color:white;border-radius:16px;padding:1.25rem 1.5rem;text-decoration:none;">
+              <span style="font-size:1.75rem;" aria-hidden="true">📸</span>
+              <div>
+                <div style="font-weight:800;font-size:1.05rem;">@educa_bem</div>
+                <div style="font-size:0.9rem;opacity:0.9;">Instagram</div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Horários -->
+          <div style="background:var(--color-bg-warm);border-radius:16px;padding:1.5rem;">
+            <h3 style="font-size:1rem;font-weight:800;color:var(--color-dark);margin:0 0 1rem;">🕐 Horários de atendimento</h3>
+            <div style="display:flex;flex-direction:column;gap:0.5rem;">
+              <div style="display:flex;justify-content:space-between;">
+                <span style="color:var(--color-dark-muted);">Segunda a Sexta</span>
+                <span style="font-weight:700;">07h00 – 18h00</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;">
+                <span style="color:var(--color-dark-muted);">Sábado</span>
+                <span style="font-weight:700;color:var(--color-dark-muted);">Fechado</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;">
+                <span style="color:var(--color-dark-muted);">Domingo</span>
+                <span style="font-weight:700;color:var(--color-dark-muted);">Fechado</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mapa -->
+          <div style="border-radius:16px;overflow:hidden;margin-top:1.5rem;">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.7!2d-46.6877!3d-23.5353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMyJzA3LjEiUyA0NsKwNDEnMTUuNyJX!5e0!3m2!1spt-BR!2sbr!4v1"
+              width="100%" height="220" style="border:0;display:block;"
+              allowfullscreen="" loading="lazy"
+              title="Mapa - Escola Educa Bem"
+            ></iframe>
+          </div>
+          <a
+            href="https://maps.google.com/?q=R.+Dr.+Miranda+de+Azevedo,+920,+Pompeia,+SP"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="display:block;text-align:center;margin-top:0.75rem;color:var(--color-primary);font-weight:700;font-size:0.9rem;text-decoration:none;"
+          >
+            📍 R. Dr. Miranda de Azevedo, 920 — Pompeia/SP — Como chegar →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .two-col-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+  @media (max-width: 768px) { .two-col-grid { grid-template-columns: 1fr !important; gap: 2rem !important; } }
+</style>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const nome = (document.getElementById('nome') as HTMLInputElement).value.trim();
+    const telefone = (document.getElementById('telefone') as HTMLInputElement).value.trim();
+    const idade = (document.getElementById('idade') as HTMLSelectElement).value;
+    const horario = (document.getElementById('horario') as HTMLSelectElement).value;
+    const mensagem = (document.getElementById('mensagem') as HTMLTextAreaElement).value.trim();
+
+    if (!nome || !telefone || !idade) {
+      alert('Por favor, preencha os campos obrigatórios.');
+      return;
+    }
+
+    const idadeLabel: Record<string, string> = {
+      '4-12meses': 'Berçário (4 meses a 1 ano)',
+      '1-3anos': 'Maternal (1 a 3 anos)',
+      '3-5anos': 'Jardim (3 a 5 anos)',
+    };
+    const horarioLabel: Record<string, string> = {
+      'manha': 'Manhã (07h – 12h)',
+      'tarde': 'Tarde (13h – 18h)',
+    };
+
+    let text = `Olá! Gostaria de agendar uma visita à Escola Educa Bem.
+
+Nome: ${nome}
+Telefone: ${telefone}
+Faixa etária da criança: ${idadeLabel[idade] || idade}`;
+
+    if (horario) text += `\nMelhor horário: ${horarioLabel[horario] || horario}`;
+    if (mensagem) text += `\nMensagem: ${mensagem}`;
+
+    const encoded = encodeURIComponent(text);
+    window.open(`https://wa.me/5511993484371?text=${encoded}`, '_blank');
+  });
+</script>

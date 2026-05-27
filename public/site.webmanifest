@@ -1,0 +1,21 @@
+{
+  "name": "Escola Educa Bem",
+  "short_name": "Educa Bem",
+  "description": "Berçário e Educação Infantil na Pompeia, São Paulo. Metodologia Reggio Emilia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FDF8F2",
+  "theme_color": "#F47B20",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

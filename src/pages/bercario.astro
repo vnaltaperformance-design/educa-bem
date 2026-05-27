@@ -1,0 +1,118 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const WA_LINK = "https://wa.me/5511993484371?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Educa%20Bem%20e%20quero%20saber%20mais%20sobre%20o%20ber%C3%A7%C3%A1rio.%20Meu%20beb%C3%AA%20tem%20X%20meses.%20Podem%20me%20ajudar%3F";
+---
+
+<Layout
+  title="Berçário na Pompeia SP — Educa Bem | Bebês de 4 meses a 1 ano"
+  description="Berçário acolhedor na Pompeia com nutricionista, armazenamento de leite materno e abordagem Reggio Emilia. Atendemos bebês de 4 meses. Conheça a Escola Educa Bem."
+  canonical="/bercario"
+>
+  <Header />
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section style="background:var(--color-primary-light);padding:5rem 1.5rem;" aria-labelledby="bercario-heading">
+      <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;" class="two-col-grid">
+        <div class="animate-on-scroll">
+          <span style="background:var(--color-primary);color:white;border-radius:20px;padding:4px 14px;font-size:0.8rem;font-weight:700;">4 meses a 1 ano</span>
+          <h1 id="bercario-heading" style="font-size:clamp(2rem,4vw,2.75rem);font-weight:900;color:var(--color-dark);margin:1rem 0 1.25rem;line-height:1.15;">
+            O berçário da Pompeia que cuida do seu bebê como se fosse da família
+          </h1>
+          <p style="color:var(--color-dark-muted);font-size:1.05rem;line-height:1.8;margin:0 0 2rem;">
+            Desde os 4 meses, seu bebê está em mãos especializadas e amorosas. Ambiente seguro, rotinas respeitosas e muito afeto — na Pompeia, zona oeste de SP.
+          </p>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn-primary">
+            🍼 Quero saber sobre o berçário
+          </a>
+        </div>
+        <div class="animate-on-scroll" style="border-radius:24px;overflow:hidden;aspect-ratio:4/3;">
+          <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=700&q=80" alt="Bebê feliz no berçário da Escola Educa Bem — Pompeia, São Paulo" width="700" height="525" loading="eager" fetchpriority="high" style="width:100%;height:100%;object-fit:cover;" />
+        </div>
+      </div>
+    </section>
+
+    <!-- CUIDADOS -->
+    <section class="section-padding" style="background:white;" aria-labelledby="cuidados-heading">
+      <div style="max-width:1100px;margin:0 auto;">
+        <div style="text-align:center;margin-bottom:3rem;" class="animate-on-scroll">
+          <h2 id="cuidados-heading" style="font-size:clamp(1.6rem,3vw,2rem);color:var(--color-dark);margin:0 0 0.75rem;">
+            Tudo que o seu bebê precisa, em um só lugar
+          </h2>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;">
+          {[
+            { icon: '🍼', title: 'Armazenamento de leite materno', desc: 'Apoiamos o aleitamento materno com armazenamento seguro e orientação às mães.' },
+            { icon: '🥗', title: 'Nutricionista presente', desc: 'Cardápios especiais para bebês, adaptados por faixa etária e sob supervisão diária.' },
+            { icon: '💤', title: 'Rotinas de sono respeitosas', desc: 'Respeitamos os ritmos individuais de cada bebê, com espaços confortáveis para o descanso.' },
+            { icon: '🫶', title: 'Vínculo afetivo seguro', desc: 'Nossa equipe é treinada para criar vínculos seguros com cada bebê, fundamental para o desenvolvimento.' },
+            { icon: '🌱', title: 'Estimulação sensorial', desc: 'Atividades de estimulação motora, sensorial e cognitiva adequadas a cada etapa do desenvolvimento.' },
+            { icon: '📱', title: 'Comunicação com a família', desc: 'Atualizações diárias sobre as atividades, alimentação e rotina do seu bebê.' },
+          ].map((item) => (
+            <div class="card-hover animate-on-scroll" style="background:var(--color-bg-warm);border-radius:20px;padding:2rem;">
+              <div style="font-size:2.5rem;margin-bottom:1rem;" aria-hidden="true">{item.icon}</div>
+              <h3 style="font-size:1.05rem;font-weight:800;color:var(--color-dark);margin:0 0 0.75rem;">{item.title}</h3>
+              <p style="font-size:0.9rem;color:var(--color-dark-muted);margin:0;line-height:1.7;">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- DESENVOLVIMENTO -->
+    <section class="section-padding" style="background:var(--color-primary-light);" aria-labelledby="dev-heading">
+      <div style="max-width:900px;margin:0 auto;">
+        <div class="animate-on-scroll" style="text-align:center;margin-bottom:3rem;">
+          <h2 id="dev-heading" style="font-size:clamp(1.6rem,3vw,2rem);color:var(--color-dark);margin:0 0 0.75rem;">
+            Desenvolvimento no primeiro ano de vida
+          </h2>
+          <p style="color:var(--color-dark-muted);">Cada mês importa. Nossa equipe acompanha cada etapa com carinho e expertise.</p>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:1rem;">
+          {[
+            { fase: '4 – 6 meses', icon: '👶', desc: 'Estimulação sensorial, tummy time, reconhecimento de vozes e rostos, sons e texturas.' },
+            { fase: '6 – 9 meses', icon: '🎈', desc: 'Início da alimentação complementar com supervisão da nutricionista, engatinhamento, primeiras palavras.' },
+            { fase: '9 – 12 meses', icon: '🚶', desc: 'Apoio ao movimento livre, interação social com outras crianças, primeiros passos e descobertas motoras.' },
+          ].map((item) => (
+            <div class="animate-on-scroll" style="background:white;border-radius:16px;padding:1.5rem;display:flex;gap:1.25rem;align-items:flex-start;box-shadow:0 2px 12px rgba(0,0,0,0.05);">
+              <div style="font-size:2rem;flex-shrink:0;" aria-hidden="true">{item.icon}</div>
+              <div>
+                <div style="font-weight:800;color:var(--color-primary);margin-bottom:0.25rem;">{item.fase}</div>
+                <div style="color:var(--color-dark-muted);font-size:0.95rem;">{item.desc}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-padding" style="background:var(--color-primary);text-align:center;">
+      <div style="max-width:600px;margin:0 auto;" class="animate-on-scroll">
+        <h2 style="color:white;font-size:clamp(1.5rem,3vw,2rem);margin:0 0 1rem;">
+          Seu bebê pode começar quando você quiser
+        </h2>
+        <p style="color:rgba(255,255,255,0.85);margin:0 0 2rem;">
+          Matrículas abertas o ano todo. Vagas limitadas para o berçário — garanta a sua!
+        </p>
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer"
+          style="background:white;color:var(--color-primary);border-radius:50px;padding:16px 36px;font-size:1.05rem;font-weight:900;text-decoration:none;display:inline-flex;align-items:center;gap:8px;">
+          💬 Verificar vagas no berçário
+        </a>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .two-col-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+  @media (max-width: 768px) {
+    .two-col-grid { grid-template-columns: 1fr !important; }
+  }
+</style>

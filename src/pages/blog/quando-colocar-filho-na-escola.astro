@@ -1,0 +1,133 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const WA_LINK = "https://wa.me/5511993484371?text=Ol%C3%A1!%20Li%20o%20artigo%20sobre%20quando%20colocar%20meu%20filho%20na%20escola%20e%20quero%20saber%20mais%20sobre%20a%20Educa%20Bem.";
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Quando colocar meu filho na escola pela primeira vez?",
+  "description": "Guia completo por faixa etária: sinais de prontidão, como funciona a adaptação e dicas para tornar a transição mais suave para bebês e crianças pequenas.",
+  "author": { "@type": "Organization", "name": "Escola Educa Bem" },
+  "publisher": { "@type": "Organization", "name": "Escola Educa Bem" },
+  "datePublished": "2025-05-20",
+};
+---
+
+<Layout
+  title="Quando colocar meu filho na escola pela primeira vez? Guia por faixa etária"
+  description="Saiba quando é o momento certo de colocar seu filho no berçário ou na educação infantil. Sinais de prontidão, adaptação e dicas para pais na Pompeia/SP."
+  canonical="/blog/quando-colocar-filho-na-escola"
+  schema={articleSchema}
+>
+  <Header />
+  <main id="main-content">
+    <article style="max-width:780px;margin:0 auto;padding:3rem 1.5rem;">
+
+      <div style="margin-bottom:2rem;">
+        <a href="/blog" style="color:var(--color-primary);font-weight:700;text-decoration:none;font-size:0.9rem;">← Voltar ao blog</a>
+      </div>
+
+      <div style="display:flex;gap:0.75rem;align-items:center;margin-bottom:1.5rem;">
+        <span style="background:var(--color-accent);color:var(--color-dark);border-radius:20px;padding:4px 12px;font-size:0.8rem;font-weight:700;">Desenvolvimento</span>
+        <span style="color:var(--color-dark-muted);font-size:0.85rem;">⏱ 6 min de leitura</span>
+        <time datetime="2025-05-20" style="color:var(--color-dark-muted);font-size:0.85rem;">20 mai. 2025</time>
+      </div>
+
+      <h1 style="font-size:clamp(1.75rem,4vw,2.5rem);font-weight:900;color:var(--color-dark);margin:0 0 1.5rem;line-height:1.2;">
+        Quando colocar meu filho na escola pela primeira vez?
+      </h1>
+
+      <div style="border-radius:20px;overflow:hidden;margin-bottom:2.5rem;aspect-ratio:16/9;">
+        <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=800&q=80" alt="Criança feliz na escola - quando colocar meu filho" width="800" height="450" loading="eager" style="width:100%;height:100%;object-fit:cover;" />
+      </div>
+
+      <div style="font-size:1.05rem;color:var(--color-dark-muted);line-height:1.9;">
+
+        <p>Uma das perguntas mais frequentes dos pais que visitam a Educa Bem é: <strong style="color:var(--color-dark);">"Será que meu filho já está pronto para a escola?"</strong></p>
+
+        <p>A resposta honesta é: depende da família, do bebê e da escola. Mas existem orientações importantes que podem te ajudar a tomar essa decisão com mais segurança.</p>
+
+        <h2 style="font-size:1.4rem;font-weight:800;color:var(--color-dark);margin:2.5rem 0 1rem;">A partir de que idade é seguro?</h2>
+
+        <p>Do ponto de vista do desenvolvimento, bebês podem frequentar berçários de qualidade a partir dos <strong>4 meses de idade</strong>. Nessa fase, o mais importante é garantir que:</p>
+
+        <ul style="padding-left:1.5rem;display:flex;flex-direction:column;gap:0.5rem;margin:1rem 0;">
+          <li>O berçário tenha profissionais especializados e experientes</li>
+          <li>A proporção de adultos por bebê seja adequada</li>
+          <li>O ambiente seja seguro, limpo e acolhedor</li>
+          <li>A escola apoie o aleitamento materno (incluindo armazenamento de leite)</li>
+        </ul>
+
+        <h2 style="font-size:1.4rem;font-weight:800;color:var(--color-dark);margin:2.5rem 0 1rem;">Guia por faixa etária</h2>
+
+        <div style="display:flex;flex-direction:column;gap:1.5rem;margin:1.5rem 0;">
+          {[
+            { icon: '👶', age: '4 a 12 meses — Berçário', items: ['Estimulação sensorial adequada ao estágio', 'Rotina de sono respeitada', 'Vínculo afetivo com a cuidadora', 'Comunicação frequente com os pais'] },
+            { icon: '🧸', age: '1 a 3 anos — Maternal', items: ['Desenvolvimento da linguagem', 'Interação social com outras crianças', 'Autonomia progressiva (comer, se vestir)', 'Brincadeiras estruturadas e livres'] },
+            { icon: '🌟', age: '3 a 5 anos — Jardim', items: ['Pré-letramento e pré-numeramento', 'Projetos temáticos de investigação', 'Preparação socioemocional para o Ensino Fundamental', 'Desenvolvimento da criatividade e pensamento crítico'] },
+          ].map((fase) => (
+            <div style="background:var(--color-bg-warm);border-radius:16px;padding:1.5rem;">
+              <div style="font-size:1.75rem;margin-bottom:0.5rem;" aria-hidden="true">{fase.icon}</div>
+              <h3 style="font-size:1.1rem;font-weight:800;color:var(--color-primary);margin:0 0 0.75rem;">{fase.age}</h3>
+              <ul style="padding-left:1.25rem;margin:0;display:flex;flex-direction:column;gap:0.4rem;">
+                {fase.items.map(item => <li style="color:var(--color-dark-muted);">{item}</li>)}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <h2 style="font-size:1.4rem;font-weight:800;color:var(--color-dark);margin:2.5rem 0 1rem;">Sinais de que seu filho está pronto</h2>
+
+        <p>Não existe uma lista de requisitos fixos — cada criança é única. Mas alguns sinais gerais indicam boa prontidão:</p>
+
+        <ul style="padding-left:1.5rem;display:flex;flex-direction:column;gap:0.5rem;margin:1rem 0;">
+          <li>Demonstra interesse por outras crianças</li>
+          <li>Tem curiosidade pelo mundo ao redor</li>
+          <li>Consegue se separar dos pais com alguma tranquilidade</li>
+          <li>Tem rotina de sono relativamente estável</li>
+        </ul>
+
+        <h2 style="font-size:1.4rem;font-weight:800;color:var(--color-dark);margin:2.5rem 0 1rem;">A adaptação: o que esperar</h2>
+
+        <p>O período de adaptação é normal e esperado — inclusive para os pais! Algumas dicas para tornar a transição mais suave:</p>
+
+        <ol style="padding-left:1.5rem;display:flex;flex-direction:column;gap:0.75rem;margin:1rem 0;">
+          <li><strong>Comece gradualmente:</strong> primeiros dias com horário reduzido</li>
+          <li><strong>Mantenha uma rotina de despedida:</strong> beijo, abraço e "até logo" — sem sumiços</li>
+          <li><strong>Não dramatize a separação:</strong> a ansiedade dos pais é percebida pelos bebês</li>
+          <li><strong>Confie na equipe:</strong> escolheu bem, agora confie</li>
+          <li><strong>Converse com a professora:</strong> feedback diário é essencial nos primeiros meses</li>
+        </ol>
+
+        <div style="background:var(--color-accent);border-radius:16px;padding:1.5rem;margin:1.5rem 0;">
+          <strong style="color:var(--color-dark);">Importante:</strong> Choro na despedida é normal e não significa que seu filho está sofrendo. Em escolas de qualidade, ele geralmente para em poucos minutos — e a equipe pode te enviar uma foto para sua tranquilidade.
+        </div>
+
+        <h2 style="font-size:1.4rem;font-weight:800;color:var(--color-dark);margin:2.5rem 0 1rem;">A escola certa faz toda a diferença</h2>
+
+        <p>A decisão de quando colocar na escola é importante, mas <strong>onde você coloca é ainda mais importante</strong>. Uma escola com proposta pedagógica sólida, equipe experiente e ambiente acolhedor transforma o desenvolvimento do seu filho.</p>
+
+        <p>Na Pompeia, a Educa Bem oferece exatamente isso: metodologia Reggio Emilia, nutricionista própria, horta e uma equipe que realmente ama o que faz.</p>
+
+      </div>
+
+      <div style="background:var(--color-primary-light);border-radius:20px;padding:2rem;margin:3rem 0;text-align:center;">
+        <div style="font-size:1.5rem;margin-bottom:0.75rem;" aria-hidden="true">🎒</div>
+        <h3 style="font-size:1.15rem;font-weight:800;color:var(--color-dark);margin:0 0 0.75rem;">
+          Agende uma visita e venha conhecer
+        </h3>
+        <p style="color:var(--color-dark-muted);margin:0 0 1.25rem;font-size:0.95rem;">
+          Matrículas abertas para crianças de 4 meses a 5 anos na Pompeia, SP.
+        </p>
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size:1rem;padding:14px 28px;">
+          📅 Agendar visita gratuita
+        </a>
+      </div>
+
+    </article>
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,107 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const WA_LINK = "https://wa.me/5511993484371?text=Ol%C3%A1!%20Tenho%20d%C3%BAvidas%20sobre%20a%20alimenta%C3%A7%C3%A3o%20na%20Educa%20Bem.%20Podem%20me%20ajudar%3F";
+---
+
+<Layout
+  title="Alimentação Saudável na Escola — Nutricionista na Educa Bem | Pompeia SP"
+  description="A Escola Educa Bem tem nutricionista presente todos os dias. Cardápios por faixa etária, atendimento a restrições alimentares e armazenamento de leite materno."
+  canonical="/alimentacao"
+>
+  <Header />
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section style="background:var(--color-primary-light);padding:5rem 1.5rem;" aria-labelledby="alim-heading">
+      <div style="max-width:900px;margin:0 auto;text-align:center;">
+        <span style="font-size:2.5rem;" aria-hidden="true">🥗</span>
+        <h1 id="alim-heading" style="font-size:clamp(2rem,4vw,2.75rem);font-weight:900;color:var(--color-dark);margin:0.75rem 0 1.25rem;">
+          Alimentação que nutre o corpo e o aprendizado
+        </h1>
+        <p style="color:var(--color-dark-muted);font-size:1.1rem;max-width:680px;margin:0 auto 2rem;line-height:1.8;">
+          Na Educa Bem, uma nutricionista especializada em alimentação infantil está presente <strong>todos os dias</strong> — não é terceirizada. Cada refeição é planejada com amor e ciência.
+        </p>
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn-primary">
+          💬 Tirar dúvidas sobre alimentação
+        </a>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section class="section-padding" style="background:white;" aria-labelledby="diferenciais-alim-heading">
+      <div style="max-width:1100px;margin:0 auto;">
+        <div style="text-align:center;margin-bottom:3rem;" class="animate-on-scroll">
+          <h2 id="diferenciais-alim-heading" style="font-size:clamp(1.6rem,3vw,2rem);color:var(--color-dark);margin:0 0 0.75rem;">
+            Por que nossa alimentação é diferente?
+          </h2>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;">
+          {[
+            { icon: '👩‍⚕️', title: 'Nutricionista presente', desc: 'Profissional própria, presente todos os dias. Não terceirizamos o cuidado com a alimentação dos seus filhos.', color: 'var(--color-primary)' },
+            { icon: '🍽️', title: 'Cardápios por faixa etária', desc: 'O que é ideal para um bebê de 6 meses é diferente do que serve para uma criança de 4 anos. Respeitamos isso.', color: 'var(--color-secondary)' },
+            { icon: '🚫', title: 'Restrições alimentares', desc: 'Alergias, intolerâncias, dieta vegetariana — atendemos com segurança e sem que a criança se sinta diferente.', color: '#7C3AED' },
+            { icon: '👨‍🍳', title: 'Cozinheira especializada', desc: 'Nossa cozinheira é especializada em alimentação infantil. Cada refeição é preparada fresquinha, todos os dias.', color: 'var(--color-primary)' },
+            { icon: '🏥', title: 'Vigilância Sanitária', desc: 'Seguimento rigoroso das normas da Vigilância Sanitária para garantir a segurança alimentar das crianças.', color: 'var(--color-secondary)' },
+            { icon: '🤱', title: 'Leite materno', desc: 'Para os bebês do berçário: armazenamento seguro de leite materno, apoiando o aleitamento das mães.', color: '#7C3AED' },
+          ].map((item) => (
+            <div class="card-hover animate-on-scroll" style="background:var(--color-bg-warm);border-radius:20px;padding:2rem;">
+              <div style={`font-size:2.5rem;margin-bottom:1rem;`} aria-hidden="true">{item.icon}</div>
+              <h3 style={`font-size:1.05rem;font-weight:800;color:${item.color};margin:0 0 0.75rem;`}>{item.title}</h3>
+              <p style="font-size:0.9rem;color:var(--color-dark-muted);margin:0;line-height:1.7;">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- NUTRICIONISTA -->
+    <section class="section-padding" style="background:var(--color-secondary-light);" aria-labelledby="nutri-heading">
+      <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;" class="two-col-grid">
+        <div class="animate-on-scroll" style="border-radius:24px;overflow:hidden;aspect-ratio:4/3;">
+          <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=700&q=80" alt="Alimentação saudável e colorida para crianças na Educa Bem" width="700" height="525" loading="lazy" style="width:100%;height:100%;object-fit:cover;" />
+        </div>
+        <div class="animate-on-scroll">
+          <h2 id="nutri-heading" style="font-size:clamp(1.6rem,3vw,2rem);color:var(--color-dark);margin:0 0 1.25rem;">
+            Uma nutricionista que realmente conhece cada criança
+          </h2>
+          <p style="color:var(--color-dark-muted);line-height:1.8;margin:0 0 1.5rem;">
+            Nossa nutricionista não é uma consultora que aparece de vez em quando. Ela está aqui <strong>todos os dias</strong>, acompanhando o desenvolvimento nutricional de cada criança, conversando com os pais e ajustando os cardápios conforme necessário.
+          </p>
+          <div style="background:white;border-radius:16px;padding:1.5rem;margin-bottom:1.5rem;">
+            <div style="font-weight:800;color:var(--color-secondary);margin-bottom:0.5rem;">Diferencial exclusivo:</div>
+            <p style="margin:0;color:var(--color-dark-muted);font-size:0.95rem;line-height:1.7;">
+              Enquanto a maioria das escolas terceiriza a nutrição, na Educa Bem a nutricionista é parte da equipe — participando do planejamento pedagógico e entendendo como a alimentação se integra ao desenvolvimento global da criança.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-padding" style="background:var(--color-primary);text-align:center;">
+      <div style="max-width:600px;margin:0 auto;" class="animate-on-scroll">
+        <h2 style="color:white;font-size:clamp(1.5rem,3vw,2rem);margin:0 0 1rem;">
+          Seu filho vai comer bem todos os dias
+        </h2>
+        <p style="color:rgba(255,255,255,0.85);margin:0 0 2rem;">
+          Agende uma visita e conheça nossa cozinha e o trabalho da nossa nutricionista.
+        </p>
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer"
+          style="background:white;color:var(--color-primary);border-radius:50px;padding:16px 36px;font-size:1.05rem;font-weight:900;text-decoration:none;display:inline-flex;align-items:center;gap:8px;">
+          📅 Agendar visita
+        </a>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .two-col-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  @media (max-width: 768px) { .two-col-grid { grid-template-columns: 1fr !important; gap: 2rem !important; } }
+</style>

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://escolaeducabem.com.br/sitemap.xml
+
+# Bloquear pastas desnecessárias para crawling
+Disallow: /api/

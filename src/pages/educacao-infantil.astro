@@ -1,0 +1,137 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const WA_LINK = "https://wa.me/5511993484371?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Educa%20Bem%20e%20quero%20saber%20mais%20sobre%20a%20Educa%C3%A7%C3%A3o%20Infantil.%20Podem%20me%20ajudar%3F";
+---
+
+<Layout
+  title="Educação Infantil Pompeia SP — Metodologia Reggio Emilia | Educa Bem"
+  description="Educação Infantil na Pompeia com Metodologia Reggio Emilia para crianças de 1 a 5 anos. Maternal e Jardim com proposta sócio-interacionista. Matrículas abertas."
+  canonical="/educacao-infantil"
+>
+  <Header />
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section style="background:linear-gradient(135deg,#F3F0FF 0%,#E0F4F3 100%);padding:5rem 1.5rem;" aria-labelledby="ei-heading">
+      <div style="max-width:900px;margin:0 auto;text-align:center;">
+        <span style="background:#7C3AED;color:white;border-radius:20px;padding:4px 14px;font-size:0.8rem;font-weight:700;">1 a 5 anos</span>
+        <h1 id="ei-heading" style="font-size:clamp(2rem,4vw,2.75rem);font-weight:900;color:var(--color-dark);margin:1rem 0 1.25rem;line-height:1.15;">
+          Educação Infantil na Pompeia que prepara para a vida — não só para a escola
+        </h1>
+        <p style="color:var(--color-dark-muted);font-size:1.05rem;max-width:680px;margin:0 auto 2rem;line-height:1.8;">
+          Do Maternal ao Jardim, as crianças da Educa Bem aprendem investigando, brincando e interagindo — com base na abordagem Reggio Emilia e no sócio-interacionismo.
+        </p>
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn-primary">
+          💬 Quero saber sobre as turmas
+        </a>
+      </div>
+    </section>
+
+    <!-- TURMAS -->
+    <section class="section-padding" style="background:white;" aria-labelledby="turmas-heading">
+      <div style="max-width:1100px;margin:0 auto;">
+        <div style="text-align:center;margin-bottom:3rem;" class="animate-on-scroll">
+          <h2 id="turmas-heading" style="font-size:clamp(1.6rem,3vw,2rem);color:var(--color-dark);margin:0 0 0.75rem;">
+            Maternal e Jardim
+          </h2>
+        </div>
+
+        <!-- Maternal -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-bottom:5rem;" class="two-col-grid">
+          <div class="animate-on-scroll">
+            <span style="background:var(--color-secondary);color:white;border-radius:20px;padding:4px 14px;font-size:0.8rem;font-weight:700;">1 – 3 anos</span>
+            <h3 style="font-size:clamp(1.5rem,3vw,1.75rem);font-weight:900;color:var(--color-secondary);margin:1rem 0 1rem;">🧸 Maternal</h3>
+            <p style="color:var(--color-dark-muted);line-height:1.8;margin:0 0 1.5rem;">
+              A fase do Maternal é marcada pela explosão do desenvolvimento — linguagem, motricidade, socialização e autonomia. Nossa turma cria o ambiente perfeito para que cada descoberta aconteça no ritmo certo.
+            </p>
+            <ul style="list-style:none;margin:0 0 2rem;padding:0;display:flex;flex-direction:column;gap:0.75rem;">
+              {['Desenvolvimento da linguagem oral e comunicação', 'Brincadeiras sensoriais e exploração de materiais', 'Primeiras relações de amizade e cooperação', 'Controle do próprio corpo e coordenação motora', 'Introdução à rotina estruturada e limites saudáveis'].map(item => (
+                <li style="display:flex;gap:0.5rem;align-items:flex-start;">
+                  <span style="color:var(--color-secondary);" aria-hidden="true">✓</span>
+                  <span style="color:var(--color-dark-muted);font-size:0.95rem;">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="animate-on-scroll" style="border-radius:24px;overflow:hidden;aspect-ratio:4/3;">
+            <img src="https://images.unsplash.com/photo-1544717302-de2939b7ef71?w=700&q=80" alt="Turma Maternal da Educa Bem — crianças de 1 a 3 anos na Pompeia" width="700" height="525" loading="lazy" style="width:100%;height:100%;object-fit:cover;" />
+          </div>
+        </div>
+
+        <!-- Jardim -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;" class="two-col-grid">
+          <div class="animate-on-scroll" style="border-radius:24px;overflow:hidden;aspect-ratio:4/3;">
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=700&q=80" alt="Turma Jardim da Educa Bem — crianças de 3 a 5 anos na Pompeia" width="700" height="525" loading="lazy" style="width:100%;height:100%;object-fit:cover;" />
+          </div>
+          <div class="animate-on-scroll">
+            <span style="background:#7C3AED;color:white;border-radius:20px;padding:4px 14px;font-size:0.8rem;font-weight:700;">3 – 5 anos</span>
+            <h3 style="font-size:clamp(1.5rem,3vw,1.75rem);font-weight:900;color:#7C3AED;margin:1rem 0 1rem;">🌟 Jardim</h3>
+            <p style="color:var(--color-dark-muted);line-height:1.8;margin:0 0 1.5rem;">
+              No Jardim, os projetos de investigação ganham profundidade. As crianças desenvolvem pensamento crítico, pré-letramento e pré-numeramento de forma natural e significativa — construindo a base para o Ensino Fundamental.
+            </p>
+            <ul style="list-style:none;margin:0 0 2rem;padding:0;display:flex;flex-direction:column;gap:0.75rem;">
+              {['Projetos temáticos de investigação real', 'Pré-letramento e familiaridade com a escrita', 'Pré-numeramento com conceitos concretos', 'Desenvolvimento da autonomia e responsabilidade', 'Preparação para o Ensino Fundamental com base emocional sólida'].map(item => (
+                <li style="display:flex;gap:0.5rem;align-items:flex-start;">
+                  <span style="color:#7C3AED;" aria-hidden="true">✓</span>
+                  <span style="color:var(--color-dark-muted);font-size:0.95rem;">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TURNOS -->
+    <section class="section-padding" style="background:var(--color-bg-warm);" aria-labelledby="turnos-heading">
+      <div style="max-width:700px;margin:0 auto;text-align:center;">
+        <h2 id="turnos-heading" style="font-size:clamp(1.5rem,3vw,2rem);color:var(--color-dark);margin:0 0 2rem;" class="animate-on-scroll">
+          Turnos disponíveis
+        </h2>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2rem;">
+          {[
+            { turno: 'Manhã', horario: '07h00 às 12h00', icon: '🌅' },
+            { turno: 'Tarde', horario: '13h00 às 18h00', icon: '☀️' },
+          ].map((t) => (
+            <div class="card-hover animate-on-scroll" style="background:white;border-radius:20px;padding:2rem;text-align:center;box-shadow:0 4px 16px rgba(0,0,0,0.06);">
+              <div style="font-size:2.5rem;margin-bottom:0.75rem;" aria-hidden="true">{t.icon}</div>
+              <div style="font-weight:800;font-size:1.25rem;color:var(--color-dark);">{t.turno}</div>
+              <div style="color:var(--color-primary);font-weight:700;margin-top:0.25rem;">{t.horario}</div>
+            </div>
+          ))}
+        </div>
+        <p style="color:var(--color-dark-muted);font-size:0.9rem;" class="animate-on-scroll">
+          * Possibilidade de turno integral — entre em contato para verificar disponibilidade.
+        </p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-padding" style="background:var(--color-secondary);text-align:center;">
+      <div style="max-width:600px;margin:0 auto;" class="animate-on-scroll">
+        <h2 style="color:white;font-size:clamp(1.5rem,3vw,2rem);margin:0 0 1rem;">
+          Vagas abertas para Maternal e Jardim
+        </h2>
+        <p style="color:rgba(255,255,255,0.85);margin:0 0 2rem;">
+          Agende uma visita e conheça as turmas. Seu filho pode começar quando você quiser!
+        </p>
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer"
+          style="background:white;color:var(--color-secondary);border-radius:50px;padding:16px 36px;font-size:1.05rem;font-weight:900;text-decoration:none;display:inline-flex;align-items:center;gap:8px;">
+          📅 Agendar visita
+        </a>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .two-col-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  @media (max-width: 768px) {
+    .two-col-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+  }
+</style>

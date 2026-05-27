@@ -1,0 +1,107 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const posts = [
+  {
+    slug: 'metodologia-reggio-emilia',
+    title: 'O que é a metodologia Reggio Emilia e por que ela é a melhor para bebês?',
+    desc: 'Entenda como essa abordagem italiana revolucionou a educação infantil e por que escolhemos ela para os filhos das famílias da Pompeia.',
+    tag: 'Pedagogia',
+    readTime: '5 min',
+    date: '2025-05-10',
+  },
+  {
+    slug: 'como-escolher-bercario-pompeia',
+    title: 'Como escolher um berçário na Pompeia: guia para pais de primeira viagem',
+    desc: 'Saiba o que observar na visita, quais perguntas fazer e como ter certeza de que é a escola certa para o seu bebê.',
+    tag: 'Guia',
+    readTime: '7 min',
+    date: '2025-05-15',
+  },
+  {
+    slug: 'quando-colocar-filho-na-escola',
+    title: 'Quando colocar meu filho na escola pela primeira vez?',
+    desc: 'Guia completo por faixa etária: sinais de prontidão, adaptação e como tornar a transição mais suave para o bebê e para os pais.',
+    tag: 'Desenvolvimento',
+    readTime: '6 min',
+    date: '2025-05-20',
+  },
+  {
+    slug: 'alimentacao-infantil-escola',
+    title: 'Alimentação infantil na escola: por que ter nutricionista faz diferença',
+    desc: 'Descubra como uma nutricionista presente todos os dias transforma a qualidade nutricional e o desenvolvimento das crianças.',
+    tag: 'Alimentação',
+    readTime: '5 min',
+    date: '2025-05-25',
+  },
+  {
+    slug: 'socio-interacionismo-vygotsky',
+    title: 'Sócio-interacionismo: como Vygotsky explica o aprendizado do seu bebê',
+    desc: 'Entenda a teoria que fundamenta nossa proposta pedagógica e veja como ela se aplica no dia a dia das crianças da Educa Bem.',
+    tag: 'Pedagogia',
+    readTime: '6 min',
+    date: '2025-06-01',
+  },
+  {
+    slug: 'horta-escola-aprendizado',
+    title: 'Horta na escola: por que cultivar plantas transforma o aprendizado infantil',
+    desc: 'A horta da Educa Bem não é decoração — é um laboratório vivo onde as crianças aprendem ciência, paciência e responsabilidade.',
+    tag: 'Natureza',
+    readTime: '4 min',
+    date: '2025-06-08',
+  },
+];
+---
+
+<Layout
+  title="Blog — Educação Infantil e Dicas para Pais | Escola Educa Bem Pompeia"
+  description="Artigos sobre educação infantil, metodologia Reggio Emilia, alimentação saudável e desenvolvimento de crianças. Blog da Escola Educa Bem — Pompeia, SP."
+  canonical="/blog"
+>
+  <Header />
+  <main id="main-content">
+
+    <section style="background:var(--color-accent);padding:5rem 1.5rem;" aria-labelledby="blog-heading">
+      <div style="max-width:800px;margin:0 auto;text-align:center;">
+        <span style="font-size:2.5rem;" aria-hidden="true">📖</span>
+        <h1 id="blog-heading" style="font-size:clamp(2rem,4vw,2.75rem);font-weight:900;color:var(--color-dark);margin:0.75rem 0 1rem;">
+          Blog da Educa Bem
+        </h1>
+        <p style="color:var(--color-dark-muted);font-size:1.05rem;">
+          Educação infantil, desenvolvimento e dicas para pais — escritas por quem vive isso todos os dias.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div style="max-width:1100px;margin:0 auto;">
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;">
+          {posts.map((post) => (
+            <article class="card-hover animate-on-scroll" style="background:white;border-radius:20px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
+              <div style="padding:2rem;flex:1;display:flex;flex-direction:column;">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+                  <span style="background:var(--color-accent);color:var(--color-dark);border-radius:20px;padding:4px 12px;font-size:0.75rem;font-weight:700;">{post.tag}</span>
+                  <span style="font-size:0.8rem;color:var(--color-dark-muted);">⏱ {post.readTime}</span>
+                </div>
+                <h2 style="font-size:1.05rem;font-weight:800;color:var(--color-dark);margin:0 0 0.75rem;line-height:1.4;flex:1;">
+                  <a href={`/blog/${post.slug}`} style="text-decoration:none;color:inherit;">{post.title}</a>
+                </h2>
+                <p style="font-size:0.875rem;color:var(--color-dark-muted);margin:0 0 1.5rem;line-height:1.7;">{post.desc}</p>
+                <div style="display:flex;justify-content:space-between;align-items:center;">
+                  <a href={`/blog/${post.slug}`} style="color:var(--color-primary);font-weight:700;font-size:0.875rem;text-decoration:none;">Ler artigo →</a>
+                  <time datetime={post.date} style="font-size:0.75rem;color:var(--color-dark-muted);">
+                    {new Date(post.date + 'T00:00:00').toLocaleDateString('pt-BR', { day:'2-digit', month:'short', year:'numeric' })}
+                  </time>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>

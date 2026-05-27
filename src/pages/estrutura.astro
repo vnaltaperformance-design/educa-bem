@@ -1,0 +1,136 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const WA_LINK = "https://wa.me/5511993484371?text=Ol%C3%A1!%20Quero%20conhecer%20a%20estrutura%20da%20Educa%20Bem%20pessoalmente.%20Podem%20me%20agendar%20uma%20visita%3F";
+---
+
+<Layout
+  title="Estrutura Física — Espaço Amplo, Horta e Área Verde | Escola Educa Bem Pompeia"
+  description="Conheça a estrutura da Escola Educa Bem na Pompeia: espaço amplo, horta própria, árvores frutíferas e ambiente lúdico e acolhedor para crianças de 4 meses a 5 anos."
+  canonical="/estrutura"
+>
+  <Header />
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section style="background:var(--color-secondary-light);padding:5rem 1.5rem;" aria-labelledby="estrutura-heading">
+      <div style="max-width:900px;margin:0 auto;text-align:center;">
+        <span style="font-size:2.5rem;" aria-hidden="true">🏡</span>
+        <h1 id="estrutura-heading" style="font-size:clamp(2rem,4vw,2.75rem);font-weight:900;color:var(--color-dark);margin:0.75rem 0 1.25rem;">
+          Um espaço pensado para a infância florescer
+        </h1>
+        <p style="color:var(--color-dark-muted);font-size:1.1rem;max-width:680px;margin:0 auto 2rem;line-height:1.8;">
+          Na Educa Bem, o ambiente é o "terceiro professor". Cada cantinho foi pensado para estimular a curiosidade, a criatividade e o movimento livre das crianças.
+        </p>
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" class="btn-primary">
+          📍 Quero visitar pessoalmente
+        </a>
+      </div>
+    </section>
+
+    <!-- DESTAQUES -->
+    <section class="section-padding" style="background:white;" aria-labelledby="destaques-heading">
+      <div style="max-width:1100px;margin:0 auto;">
+        <div style="text-align:center;margin-bottom:3rem;" class="animate-on-scroll">
+          <h2 id="destaques-heading" style="font-size:clamp(1.6rem,3vw,2rem);color:var(--color-dark);margin:0 0 0.75rem;">
+            Estrutura diferenciada na Pompeia
+          </h2>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin-bottom:4rem;">
+          {[
+            { icon: '🌳', title: 'Árvores frutíferas', desc: 'Ambiente com árvores frutíferas reais — as crianças aprendem sobre natureza de forma prática e direta.' },
+            { icon: '🌱', title: 'Horta própria', desc: 'A horta da Educa Bem é um laboratório vivo. As crianças plantam, regam e observam o crescimento.' },
+            { icon: '🏠', title: 'Espaço amplo', desc: 'Área generosa que permite movimento livre, brincadeiras ao ar livre e exploração do espaço.' },
+            { icon: '🎨', title: 'Ateliê criativo', desc: 'Espaço dedicado a arte, expressão criativa e trabalhos manuais — onde as criações tomam forma.' },
+            { icon: '📚', title: 'Cantinho da leitura', desc: 'Espaço aconchegante com livros infantis para cultivar o amor pela leitura desde cedo.' },
+            { icon: '☀️', title: 'Luz natural', desc: 'Ambientes iluminados naturalmente — a luz como elemento essencial do bem-estar e aprendizado.' },
+          ].map((item) => (
+            <div class="card-hover animate-on-scroll" style="background:var(--color-bg-warm);border-radius:20px;padding:2rem;">
+              <div style="font-size:2.5rem;margin-bottom:1rem;" aria-hidden="true">{item.icon}</div>
+              <h3 style="font-size:1.05rem;font-weight:800;color:var(--color-dark);margin:0 0 0.75rem;">{item.title}</h3>
+              <p style="font-size:0.9rem;color:var(--color-dark-muted);margin:0;line-height:1.7;">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <!-- Galeria -->
+        <h2 style="font-size:1.5rem;font-weight:800;color:var(--color-dark);margin:0 0 1.5rem;text-align:center;" class="animate-on-scroll">
+          Conheça nosso espaço
+        </h2>
+        <!-- TODO: substituir todas as imagens por fotos reais da escola -->
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;" class="gallery-grid">
+          {[
+            { src: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=500&q=80', alt: 'Sala de aula colorida e estimulante na Escola Educa Bem' },
+            { src: 'https://images.unsplash.com/photo-1544717302-de2939b7ef71?w=500&q=80', alt: 'Área externa para brincadeiras e exploração na Educa Bem' },
+            { src: 'https://images.unsplash.com/photo-1576267423048-15c0040fec78?w=500&q=80', alt: 'Horta escolar da Educa Bem — Pompeia São Paulo' },
+            { src: 'https://images.unsplash.com/photo-1568152950566-7a604f2a1b15?w=500&q=80', alt: 'Atividades lúdicas e criativas na Educa Bem' },
+            { src: 'https://images.unsplash.com/photo-1527482937786-6608f6e14c15?w=500&q=80', alt: 'Berçário acolhedor e seguro — Escola Educa Bem' },
+            { src: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500&q=80', alt: 'Momento de leitura e descoberta na Educa Bem' },
+          ].map((img) => (
+            <div class="animate-on-scroll" style="border-radius:16px;overflow:hidden;aspect-ratio:4/3;">
+              <img src={img.src} alt={img.alt} width="500" height="375" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;"
+                onmouseover="this.style.transform='scale(1.06)'"
+                onmouseout="this.style.transform='scale(1)'"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ENDEREÇO -->
+    <section class="section-padding" style="background:var(--color-bg-warm);" aria-labelledby="endereco-heading">
+      <div style="max-width:900px;margin:0 auto;text-align:center;">
+        <h2 id="endereco-heading" style="font-size:clamp(1.5rem,3vw,2rem);color:var(--color-dark);margin:0 0 0.75rem;" class="animate-on-scroll">
+          Como chegar na Educa Bem
+        </h2>
+        <p style="color:var(--color-dark-muted);margin:0 0 2rem;" class="animate-on-scroll">
+          📍 R. Dr. Miranda de Azevedo, 920 — Pompeia, São Paulo — SP | CEP 05027-000
+        </p>
+        <div style="border-radius:20px;overflow:hidden;margin-bottom:1.5rem;" class="animate-on-scroll">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.7!2d-46.6877!3d-23.5353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMyJzA3LjEiUyA0NsKwNDEnMTUuNyJX!5e0!3m2!1spt-BR!2sbr!4v1"
+            width="100%" height="350" style="border:0;display:block;"
+            allowfullscreen="" loading="lazy"
+            title="Localização da Escola Educa Bem no Google Maps"
+          ></iframe>
+        </div>
+        <a
+          href="https://maps.google.com/?q=R.+Dr.+Miranda+de+Azevedo,+920,+Pompeia,+SP"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary"
+        >
+          📍 Abrir no Google Maps
+        </a>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-padding" style="background:var(--color-secondary);text-align:center;">
+      <div style="max-width:600px;margin:0 auto;" class="animate-on-scroll">
+        <h2 style="color:white;font-size:clamp(1.5rem,3vw,2rem);margin:0 0 1rem;">
+          Venha conhecer pessoalmente
+        </h2>
+        <p style="color:rgba(255,255,255,0.85);margin:0 0 2rem;">
+          Uma foto não substitui a experiência de estar aqui. Agende sua visita e traga seu filho!
+        </p>
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer"
+          style="background:white;color:var(--color-secondary);border-radius:50px;padding:16px 36px;font-size:1.05rem;font-weight:900;text-decoration:none;display:inline-flex;align-items:center;gap:8px;">
+          📅 Agendar visita gratuita
+        </a>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  @media (max-width: 640px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+</style>
