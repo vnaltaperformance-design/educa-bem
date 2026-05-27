@@ -20,12 +20,16 @@ const currentPath = Astro.url.pathname;
   <div style="max-width:1200px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:72px;">
 
     <!-- Logo -->
-    <a href="/" aria-label="Escola Educa Bem — Página inicial" style="display:flex;align-items:center;gap:0.5rem;text-decoration:none;">
-      <span class="logo-bounce" style="font-size:2rem;" aria-hidden="true">🎒</span>
-      <div>
-        <div style="font-family:'Nunito',sans-serif;font-weight:900;font-size:1.3rem;color:var(--color-primary);line-height:1;">Educa Bem</div>
-        <div style="font-size:0.65rem;color:var(--color-dark-muted);font-weight:600;letter-spacing:0.05em;text-transform:uppercase;">Escola Infantil</div>
-      </div>
+    <a href="/" aria-label="Escola Educa Bem — Página inicial" style="display:flex;align-items:center;text-decoration:none;">
+      <img
+        src="/images/logo.jpg"
+        alt="Escola Educa Bem — Berçário e Educação Infantil"
+        width="160"
+        height="72"
+        loading="eager"
+        fetchpriority="high"
+        style="height:52px;width:auto;object-fit:contain;"
+      />
     </a>
 
     <!-- Desktop Nav -->
