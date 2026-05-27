@@ -120,7 +120,7 @@ const WA_VISITA = "https://wa.me/5511993484371?text=Ol%C3%A1!%20Gostaria%20de%20
           </p>
         </div>
 
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;">
+        <div class="mobile-cards-scroll" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
           {[
             { icon: '🌱', title: 'Metodologia Reggio Emilia', desc: 'Reconhecida mundialmente como a melhor abordagem para educação infantil. A criança como pesquisadora nata.' },
             { icon: '🧠', title: 'Base em Vygotsky, Piaget e Freinet', desc: 'Aprendizagem mediada pela interação social, desenvolvimento por estágios e aprendizagem pela prática.' },
@@ -287,7 +287,7 @@ const WA_VISITA = "https://wa.me/5511993484371?text=Ol%C3%A1!%20Gostaria%20de%20
           </div>
         </div>
 
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.5rem;">
+        <div class="mobile-cards-scroll" style="grid-template-columns:repeat(auto-fit,minmax(290px,1fr));">
           {[
             { quote: 'Eu só tenho elogios para a escola. Meus filhos são super bem tratados, eles amam ir para a escola. A equipe é maravilhosa!', name: 'Ana C.', role: 'Mãe de alunos do Maternal e Jardim' },
             { quote: 'A metodologia da Educa Bem é incrível. Vejo minha filha crescer não só em conhecimento, mas em autonomia e confiança.', name: 'Ricardo M.', role: 'Pai de aluna do Jardim' },
@@ -307,7 +307,7 @@ const WA_VISITA = "https://wa.me/5511993484371?text=Ol%C3%A1!%20Gostaria%20de%20
           ))}
         </div>
 
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:4rem;text-align:center;">
+        <div class="mobile-col" style="display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:4rem;text-align:center;">
           {[
             { target: '120', suffix: '+', label: 'Famílias atendidas', icon: '👨‍👩‍👧‍👦' },
             { target: '4', suffix: ' anos', label: 'De história na Pompeia', icon: '🏫' },
@@ -333,7 +333,7 @@ const WA_VISITA = "https://wa.me/5511993484371?text=Ol%C3%A1!%20Gostaria%20de%20
         </h2>
         <p style="color:rgba(255,255,255,0.85);font-size:1.05rem;margin:0 0 3rem;">Em 3 passos, seu filho começa a jornada na Educa Bem.</p>
 
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-bottom:3rem;">
+        <div class="mobile-col" style="display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-bottom:3rem;">
           {[
             { num: '①', title: 'Agende uma visita', desc: 'Marque pelo WhatsApp ou telefone no horário que preferir.' },
             { num: '②', title: 'Conheça a escola', desc: 'Venha ver as salas, conversar com a equipe e sentir o ambiente.' },
@@ -365,7 +365,7 @@ const WA_VISITA = "https://wa.me/5511993484371?text=Ol%C3%A1!%20Gostaria%20de%20
           <a href="/blog" class="btn-secondary">Ver todos os artigos →</a>
         </div>
 
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.5rem;">
+        <div class="mobile-cards-scroll" style="grid-template-columns:repeat(auto-fit,minmax(290px,1fr));">
           {[
             { title: 'O que é a metodologia Reggio Emilia e por que ela é a melhor para bebês?', desc: 'Entenda como essa abordagem italiana revolucionou a educação infantil.', tag: 'Pedagogia', readTime: '5 min', href: '/blog/metodologia-reggio-emilia' },
             { title: 'Como escolher um berçário na Pompeia: guia para pais de primeira viagem', desc: 'Saiba o que observar na visita e quais perguntas fazer.', tag: 'Guia', readTime: '7 min', href: '/blog/como-escolher-bercario-pompeia' },
@@ -470,10 +470,6 @@ const WA_VISITA = "https://wa.me/5511993484371?text=Ol%C3%A1!%20Gostaria%20de%20
     }
     .two-col-reverse > :first-child {
       order: 2;
-    }
-    [style*="grid-template-columns:repeat(3,1fr)"] {
-      display: grid !important;
-      grid-template-columns: 1fr !important;
     }
   }
 </style>
